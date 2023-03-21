@@ -20,10 +20,11 @@ public class TestCoche {
         Assert.assertEquals(30, nuevoCoche.velocidad);
     }
     @Test
-    public void test_AlDecelerar_UnCoche_SuVelocidad_Disminuye() {
+    public void test_AlDecelerar_UnCoche_SuVelocidad_Disminuye_NoPuedeSer_MenorQue0() {
         Coche nuevoCoche = new Coche();
         nuevoCoche.velocidad = 50;
-        nuevoCoche.deacelerar(20);
-        Assert.assertEquals(30, nuevoCoche.velocidad);
+        nuevoCoche.deacelerar(80);
+        Assert.assertEquals(0, nuevoCoche.velocidad);
     }
+
 }
