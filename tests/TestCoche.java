@@ -11,4 +11,10 @@ public class TestCoche {
         Coche nuevoCoche = new Coche();
         Assert.assertEquals(0,nuevoCoche.velocidad);
     }
+    @Test
+    public void test_AlAcelerar_UnCoche_SuVelocidad_Aumenta(){
+        Coche nuevoCoche = new Coche();
+        nuevoCoche.acelerar(30);
+        Assert.assertEquals(30,nuevoCoche.velocidad);
+    }
 }
